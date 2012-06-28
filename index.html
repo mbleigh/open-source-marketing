@@ -221,7 +221,7 @@
       $(function() {
         $('#impress').on('impress:stepenter', function() {
           var slide = $('.step.active').attr('id')
-          _gaq.push(["_trackEvent","Slides", "View", slide]);
+          _gaq.push(["_trackPageview","/open-source-marketing/slides/" + slide]);
         });
       });
     </script>
