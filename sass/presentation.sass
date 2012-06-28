@@ -1,0 +1,182 @@
+@import "compass"
+@import "compass/reset"
+
+$orange: #da0
+$green: #482
+
+=bg($slide, $color)
+  body.impress-on-#{$slide}
+    background-color: $color
+  .impress-not-supported ##{$slide}
+    background-color: $color
+
+body
+  font-family: Lato, sans-serif
+  background: #333
+  color: white
+  +transition(background-color 0.5s)
+
+a
+  color: inherit
+  text-decoration: none
+
+b, strong
+  font-weight: bold
+
+h1, h2
+  font-weight: 900
+
+h1
+  font-size: 2em
+  line-height: 1em
+h2
+  font-size: 1.5em
+  line-height: 1em
+h4
+  font-weight: bold
+
+.space
+  margin-bottom: 0.5em
+
+del
+  color: #aaa
+  text-decoration: none
+  position: relative
+  &:after
+    content: " "
+    width: 100%
+    position: absolute
+    left: -5%
+    top: 50%
+    width: 110%
+    border-bottom: 0.1em solid #911
+
+.caps
+  text-transform: uppercase
+
+.center
+  text-align: center
+
+.c1
+  color: $orange
+
+.c2
+  color: $green
+
+.step
+  width: 900px
+  height: 700px
+  padding: 40px
+  font-size: 48px
+  margin: 20px auto
+  +box-sizing(border-box)
+  line-height: 1.5
+
+.impress-enabled .step
+  margin: 0
+  opacity: 0.25
+  +transition(opacity 1s)
+
+.impress-enabled .step.active
+  opacity: 1.0
+
+.byline
+  border-top: 1px solid #999
+  padding-top: 0.2em
+  margin-top: 3em
+  font-size: 0.8em
+
+#about
+  color: #035
+  font-size: 3em
+  padding-top: 3em
+  a
+    margin: 0.5em
+  h2
+    display: inline-block
+    margin: 0.5em 2.5%
+    width: 40%
+    font-size: 0.8em
+    a
+      display: inline-block
+      background: white
+      +box-shadow(3px 3px 10px #48a)
+      font-size: 0.8em
+      padding: 1.5em 0
+      width: 100%
+      text-align: center
+      +box-sizing(border-box)
+      b
+        font-size: 1.2em
+        font-weight: 800
+        display: block
+      em
+        font-weight: 300
+        color: #68a
+
+.huge
+  font-size: 3em
+.huger
+  font-size: 3.5em
+.oneline
+  margin-top: 1em
+
+.biglist
+  li
+    position: relative
+    padding-left: 1em
+    font-size: 0.8em
+    &:before
+      content: " "
+      width: 0.5em
+      height: 0.5em
+      position: absolute
+      top: 50%
+      left: 0.1em
+      margin-top: -0.25em
+      background: $green
+
+.photo
+  text-align: center
+  line-height: 700px
+  img
+    height: 100%
+    &.horizontal
+      height: auto
+      width: 100%
+    +transition(all 1.5s)
+    +transform(rotate(4deg))
+  &.active img
+    +transform(rotate(0deg))
+  .credit
+    background: rgba(0,0,0,0.3)
+    font-size: 0.2em
+    padding: 0.3em 0.5em
+    display: inline-block
+    +border-radius(0.1em)
+
+#so-what
+  color: black
+  .huge
+    font-size: 11em
+
+#reputation .huge
+  font-size: 3.2em
+
++bg("about", #adf)
++bg("orly", black)
++bg("yarly", #241)
++bg("so-what", $orange)
++bg("pbr-art", white)
++bg("open-source", white)
++bg("traction", $green)
++bg("traction-github", white)
++bg("recognition", $green)
++bg("recognition-backbone", #27a)
++bg("reputation", $green)
++bg("reputation-intridea", #e5eeff)
++bg("how-to", $green)
++bg("how-to-collaborate", #5cf)
++bg("how-to-explore", #f90)
++bg("how-to-share", #694)
++bg("how-to-care", #faa)
